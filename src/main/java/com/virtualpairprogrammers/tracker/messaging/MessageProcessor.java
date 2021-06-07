@@ -27,7 +27,8 @@ public class MessageProcessor {
 	public void processPositionMessageFromQueue(Map<String, String> incomingMessage ) throws ParseException 
 	{
 		Date convertedDatestamp = new java.util.Date();
-		
+	
+
 		VehiclePosition newReport = new VehicleBuilder()
 				                          .withName(incomingMessage.get("vehicle"))
 				                          .withLat(new BigDecimal(incomingMessage.get("lat")))
